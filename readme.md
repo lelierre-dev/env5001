@@ -15,13 +15,13 @@ La méthodologie se base sur les recherches faites dans le drive partagé.
     └── config_model.yaml  # Config modèles
 ```
 
-## Utilisation
+## Utilisation
 
-### API
+### API
 
 Lancement d'une API web qui appelle notamment le traitement.py pour répondre à des statistiques d'entrée.
 
-### Interface
+### Interface
 
 Interface avec les mêmes fonctionnalités que l'API, avec des appels à traitement.py mais par l'intermédiaire d'un appel python. Il faut pouvoir prendre ce script comme une librairie.
 
@@ -29,9 +29,9 @@ Interface avec les mêmes fonctionnalités que l'API, avec des appels à traitem
 
 Centre de calcul qui rassemble les appels et renvoie les valeurs nécessaires
 
-## Configuration
+## Configuration
 
-### Configuration basique
+### Configuration basique
 
 La configuration basique contiendra par les chemins de sauvergarde données par exemple pour créer un historique des calculs.
 En général ce seront les paramètres liés au codage du projet et les fichiers .py
