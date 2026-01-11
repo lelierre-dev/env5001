@@ -6,8 +6,6 @@ profiles:
     prompt_size_chars: 0
     avg_topics: 1
     avg_prompts: 0
-    prefill_exp: 1.0
-    prefill_mult: 1.0
     output_tokens_constant: null
     output_tokens_factor: 1.0
     throughput_tokens_per_sec: 60
@@ -24,8 +22,6 @@ profiles:
     prompt_size_chars: 600
     avg_topics: 1
     avg_prompts: 1
-    prefill_exp: 1.0
-    prefill_mult: 1.0
     output_tokens_constant: 300
     output_tokens_factor: null
     throughput_tokens_per_sec: 60
@@ -42,8 +38,6 @@ profiles:
     prompt_size_chars: 600
     avg_topics: 5
     avg_prompts: 2
-    prefill_exp: 1.0
-    prefill_mult: 1.0
     output_tokens_constant: 300
     output_tokens_factor: null
     throughput_tokens_per_sec: 60

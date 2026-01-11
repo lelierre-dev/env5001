@@ -21,8 +21,6 @@ class ProfileConfig:
 	prompt_size_chars: float
 	avg_topics: float
 	avg_prompts: float
-	prefill_exp: float
-	prefill_mult: float
 	output_tokens_constant: Optional[float]
 	output_tokens_factor: Optional[float]
 	throughput_tokens_per_sec: float
@@ -78,8 +76,6 @@ class EnergyCalculator:
 				prompt_size_chars=float(cfg.get("prompt_size_chars", 0.0)),
 				avg_topics=float(cfg.get("avg_topics", 1.0)),
 				avg_prompts=float(cfg.get("avg_prompts", 0.0)),
-				prefill_exp=float(cfg.get("prefill_exp", 1.0)),
-				prefill_mult=float(cfg.get("prefill_mult", 1.0)),
 				output_tokens_constant=cfg.get("output_tokens_constant"),
 				output_tokens_factor=cfg.get("output_tokens_factor"),
 				throughput_tokens_per_sec=float(cfg.get("throughput_tokens_per_sec", 1.0)),
@@ -110,9 +106,9 @@ class EnergyCalculator:
 		if throughput <= 0:
 			raise ValueError(f"Throughput must be positive for profile {profile.name}")
 
-		# Prefill: par défaut linéaire; on autorise un exposant configurable
-		# pour approcher un coût quadratique sans explosion dimensionnelle.
-		t_prefill_s = (input_tokens ** profile.prefill_exp) / throughput * profile.prefill_mult
+		#t_prefill_s = (input_tokens ** 2) / throughput
+		n_ref = 2048  # Référence pour la complexité quadratique
+		t_prefill_s = (input_tokens**2) / (throughput * n_ref)
 		t_decode_s = output_tokens / throughput
 		t_compute_h = (t_prefill_s + t_decode_s) / 3600
 
