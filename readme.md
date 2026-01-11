@@ -39,3 +39,17 @@ En général ce seront les paramètres liés au codage du projet et les fichiers
 # Configuration des modeles 
 
 La configuration des modeles contiendra les valeurs de consommation en fonction des pays (PUE), consommation moyenne par modeles... tout ce qui permet de faire les calculs selon la méthodologie dévelopée dans le google drive.
+
+
+Exemple Resultat :
+
+python api.py
+
+Profil       |   req |   in_tok_tot |  out_tok_tot |    kWh |   CO2 kg
+------------------------------------------------------------------------------
+Chatbot      | 223861 |    626810800 |     67158300 | 2345.7200 | 703.7160
+Completion   |  22897 |     14883050 |      6869100 | 73.5255 | 22.0577
+Translation  |   8191 |      4095500 |      4095500 | 24.4922 | 1.7757
+------------------------------------------------------------------------------
+Total        | 254949 |    645789350 |     78122900 | 2443.7377 | 727.5493
+Hypothèse char/token : 4.0
