@@ -43,13 +43,5 @@ La configuration des modeles contiendra les valeurs de consommation en fonction 
 
 Exemple Resultat :
 
-python api.py
+![alt text](image.png)
 
-Profil       |   req |   in_tok_tot |  out_tok_tot |    kWh |   CO2 kg
-------------------------------------------------------------------------------
-Chatbot      | 223861 |    626810800 |     67158300 | 2345.7200 | 703.7160
-Completion   |  22897 |     14883050 |      6869100 | 73.5255 | 22.0577
-Translation  |   8191 |      4095500 |      4095500 | 24.4922 | 1.7757
-------------------------------------------------------------------------------
-Total        | 254949 |    645789350 |     78122900 | 2443.7377 | 727.5493
-Hypothèse char/token : 4.0
