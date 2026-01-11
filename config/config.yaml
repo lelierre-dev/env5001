@@ -1,0 +1,4 @@
+data_path: data/2025-FluidTopics-daily-analytics.yaml
+default_region: us
+default_provider: openai
+output_unit: kwh

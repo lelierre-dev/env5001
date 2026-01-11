@@ -1,0 +1,56 @@
+char_per_token: 4.0
+
+profiles:
+  translation:
+    topic_size_chars: 2000
+    prompt_size_chars: 0
+    avg_topics: 1
+    avg_prompts: 0
+    prefill_exp: 1.0
+    prefill_mult: 1.0
+    output_tokens_constant: null
+    output_tokens_factor: 1.0
+    throughput_tokens_per_sec: 60
+    gpu_power_w: 700
+    cpu_power_w: 85
+    gpu_util: 0.775
+    cpu_util: 0.225
+    pue: 1.15
+    utilization_rate: 1.0
+    carbon_intensity_g_per_kwh: 72.5
+
+  completion:
+    topic_size_chars: 2000
+    prompt_size_chars: 600
+    avg_topics: 1
+    avg_prompts: 1
+    prefill_exp: 1.0
+    prefill_mult: 1.0
+    output_tokens_constant: 300
+    output_tokens_factor: null
+    throughput_tokens_per_sec: 60
+    gpu_power_w: 700
+    cpu_power_w: 85
+    gpu_util: 0.775
+    cpu_util: 0.225
+    pue: 1.3
+    utilization_rate: 1.0
+    carbon_intensity_g_per_kwh: 300
+
+  chatbot:
+    topic_size_chars: 2000
+    prompt_size_chars: 600
+    avg_topics: 5
+    avg_prompts: 2
+    prefill_exp: 1.0
+    prefill_mult: 1.0
+    output_tokens_constant: 300
+    output_tokens_factor: null
+    throughput_tokens_per_sec: 60
+    gpu_power_w: 700
+    cpu_power_w: 85
+    gpu_util: 0.775
+    cpu_util: 0.225
+    pue: 1.3
+    utilization_rate: 1.0
+    carbon_intensity_g_per_kwh: 300
