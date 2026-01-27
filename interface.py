@@ -21,3 +21,8 @@ def format_results(results: Dict[str, Any]) -> Dict[str, Any]:
 def run(region: str = None) -> Dict[str, Any]:
     results = run_energy_calculation(region=region)
     return format_results(results)
+
+
+def run_from_analytics(analytics: Dict[str, Any], region: str = None) -> Dict[str, Any]:
+    results = run_energy_calculation(region=region, analytics=analytics)
+    return format_results(results)

@@ -114,9 +114,11 @@ def compute_profile(
     }
 
 
-def run_energy_calculation(region: str = None) -> Dict[str, Any]:
+def run_energy_calculation(region: str = None, analytics: Dict[str, Any] = None) -> Dict[str, Any]:
     config, config_model = load_configs()
-    analytics = load_analytics(config)
+
+    if analytics is None:
+        analytics = load_analytics(config)
 
     if region is None:
         region = config["default_region"]

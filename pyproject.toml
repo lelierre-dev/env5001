@@ -1,0 +1,17 @@
+[project]
+name = "env5001"
+version = "0.1.0"
+description = "Energy & carbon calculator API"
+readme = "readme.md"
+requires-python = ">=3.10"
+
+dependencies = [
+    "fastapi>=0.110",
+    "uvicorn>=0.27",
+    "python-multipart>=0.0.9",
+    "PyYAML>=6.0",
+]
+
+[project.optional-dependencies]
+# Example: dev tools
+# dev = ["pytest>=8.0"]
